@@ -1,0 +1,40 @@
+<div class="app-root">
+    <mat-toolbar color="primary" class="mat-elevation-z2 app-toolbar">
+        <button style="margin-left: -8px" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div [style.marginLeft.px]="isSmall() ? 8 : 24">PX Blue Angular</div>
+    </mat-toolbar>
+    <div class="app-body" [style.backgroundColor]="colors.white[50]">
+        <div class="app-body-content">
+            <highcharts-chart
+                [update]="true"
+                [options]="lineChartOptions"
+                [Highcharts]="HC"
+                [style.height.px]="height"
+                [style.width.px]="width"
+                style="display: block; margin-bottom: 96px"
+            ></highcharts-chart>
+
+
+          <highcharts-chart
+            [update]="true"
+            [options]="areaChartOptions"
+            [Highcharts]="HC"
+            [style.height.px]="height"
+            [style.width.px]="width"
+            style="display: block; margin-bottom: 96px"
+          ></highcharts-chart>
+
+
+          <highcharts-chart
+            [update]="true"
+            [options]="barChartOptions"
+            [Highcharts]="HC"
+            [style.height.px]="height"
+            [style.width.px]="width"
+            style="display: block; margin-bottom: 96px"
+          ></highcharts-chart>
+        </div>
+    </div>
+</div>

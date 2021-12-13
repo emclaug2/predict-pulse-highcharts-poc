@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.highcharts-container {
+  width: 100%;
+}
+.highcharts-container svg {
+  width: 100%;
+  display: flex;
+}
